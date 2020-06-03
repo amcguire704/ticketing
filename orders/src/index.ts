@@ -7,6 +7,8 @@ import { ExpirationCompleteListener } from './events/expiration_complete_listene
 import { PaymentCreatedListener } from './events/payment_created_listener';
 
 const start = async () => {
+  console.log('starting');
+
   if (!process.env.JWT_KEY) {
     throw new Error('JWT environment var must be defined');
   }
