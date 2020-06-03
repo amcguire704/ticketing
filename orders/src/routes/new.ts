@@ -12,7 +12,7 @@ import { OrderCreatedPublisher } from '../events/order_created_publisher';
 import { natsWrapper } from '../nats-wrapper';
 
 const router = express.Router();
-const expirationWindowSeconds = 15 * 60;
+const expirationWindowSeconds = 1 * 60;
 
 router.post(
   '/api/orders',

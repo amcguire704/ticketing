@@ -5,7 +5,10 @@ import { Ticket } from '../models/tickets';
 const router = express.Router();
 
 router.get('/api/tickets', async (req: Request, res: Response) => {
-  const tickets = await Ticket.find({});
+  const tickets = await Ticket.find({
+    orderId: undefined, //look up the difference btw undefined and null
+  });
+  // we only want to filter tickets where orderId is not set
   res.send(tickets);
 });
 
